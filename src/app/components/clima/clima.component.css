@@ -1,0 +1,8 @@
+h1{
+    margin: 20px;
+    text-align: center;
+}
+.card{
+    border: solid black 2px;
+    background-color: aqua;
+}

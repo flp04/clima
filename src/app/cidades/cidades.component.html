@@ -1,0 +1,19 @@
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <form class="d-flex">
+        <select (change)="selecionarCidade($event)">
+            <option>Selecione a capital</option>
+            <option *ngFor="let cidade of cidades" value="{{ cidade.cod }}">{{ cidade.cidade }}</option>
+        </select>
+      </form>
+    </div>
+  </nav>
+<br>
+<br>
+
+<input type="date" (change)=definirData($event)>
+
+<p>Máxima: {{ temp_max }}</p>
+<p>Mínima: {{ temp_min }} </p>
+<p>Resumo: {{ resumo }}</p>

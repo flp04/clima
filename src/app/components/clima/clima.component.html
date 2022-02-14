@@ -1,0 +1,40 @@
+<nav>
+
+  <app-lista-cidades (cidadeSelecionada)="setCidade($event)"></app-lista-cidades>
+  <app-data (dataSelecionada)="setData($event)"></app-data>
+</nav>
+
+<h1>Tempo em {{ cidadeSelecionada.nome }}, {{ dataSelecionada }}</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Manhã</h5>
+          <p>Máxima: {{ manha.tempMax }}</p>
+          <p>Mínima: {{ manha.tempMin }} </p>
+          <p>Resumo: {{ manha.resumo }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Tarde</h5>
+          <p>Máxima: {{ tarde.tempMax }}</p>
+          <p>Mínima: {{ tarde.tempMin }} </p>
+          <p>Resumo: {{ tarde.resumo }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Noite</h5>
+          <p>Máxima: {{ noite.tempMax }}</p>
+          <p>Mínima: {{ noite.tempMin }} </p>
+          <p>Resumo: {{ noite.resumo }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
